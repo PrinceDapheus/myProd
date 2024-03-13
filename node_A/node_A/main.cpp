@@ -7,8 +7,9 @@
 
 #include <iostream>
 using namespace std;
+#include "computer.hpp"
 
-
+/*
 class computer {
     
 public:
@@ -19,9 +20,11 @@ public:
     
 };
 
+*/
+
 int main (){
     
-    computer const c1;
+    const computer c1;
     
     char input1;
     string content;
@@ -34,7 +37,7 @@ int main (){
     cout<<"Name: ";
     c1.printSome(content);
     cout << "Would you like to change your name?" << endl;
-    ///*
+  
    
     cin >> input1;
     
@@ -54,10 +57,10 @@ int main (){
     }
     
   
-   // else cout << "Wrong character usage" <<endl;
+   else cout << "Wrong character usage" <<endl;
     
     
     return 0;
      
-    // */
+   
 }
