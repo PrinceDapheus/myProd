@@ -9,43 +9,43 @@
 using namespace std;
 
 
-class profile{
+
+class vector2d{
     
 public:
-    
-    profile (){
+    vector2d(int v1 , int v2)
+    :vector1(v1) , vector2(v2)
+    {
         
     }
     
-    profile (int a){
-        age = a;
+    vector2d(){
+        
     }
     
-
-    int age;
     
     
-    profile operator + (profile &obj){
-    profile result;
-     result.age  = age + obj.age;
-        return result;
+    int vector1;
+    int vector2;
+    
+    
+    vector2d operator + (vector2d obj){
+        
+        return vector2d (vector1 + obj.vector1, vector2 + obj.vector2);
     }
-
-    
     
 };
 
-
-
-int main(){
+int main (){
     
-    profile a = 30;
-    profile b = 10;
-    profile c;
+    vector2d line1 (45 , 77);
+    vector2d line2 (77 , 89);
+    vector2d sum;
     
-   c = a + b;
+    sum = line1 + line2;
+    cout << sum.vector1 <<endl;
     
-    cout << c.age <<endl;
+    
     
     return 0;
 }
